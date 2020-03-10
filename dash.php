@@ -17,14 +17,16 @@
 </head>
 
 
-<body  style="background:#000;">\
+<body  style="background:#000;">
 <div class="header">
 <div class="row">
 <div class="col-lg-6">
-<span class="logo">Quiz Portal</span></div>
+<span class="logo">Quiz Portal</span>
+</div>
+
 
 <?php
-include_once 'dbConnection.php';
+include_once 'databaseCon.php';
 session_start();
 if (!(isset($_SESSION['username']))  || ($_SESSION['key']) != '54585c506829293a2d4c3b68543b316e2e7a2d277858545a36362e5f39') {
     session_destroy();
@@ -37,3 +39,7 @@ if (!(isset($_SESSION['username']))  || ($_SESSION['key']) != '54585c506829293a2
     echo '<span class="pull-right top title1" ><span style="color:white"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;&nbsp;Hello,</span> <span class="log log1" style="color:lightyellow">' . $name . '&nbsp;&nbsp;|&nbsp;&nbsp;<a href="logout.php?q=account.php" style="color:lightyellow"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;Logout</button></a></span>';
 }
 ?>
+</div>
+</div>
+</body>
+</html>
