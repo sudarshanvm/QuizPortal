@@ -9,7 +9,7 @@ $username = addslashes($username);
 $password = stripslashes($password);
 $password = addslashes($password);
 
-$result = mysqli_query($con, "SELECT * FROM admin WHERE name = '$username' and password = '$password'") or die('Error');
+$result = mysqli_query($con, "SELECT * FROM Admin WHERE adminid = '$username' and password = '$password'") or die('Error');
 // echo mysqli_num_rows($result);
 
 $count = mysqli_num_rows($result);
