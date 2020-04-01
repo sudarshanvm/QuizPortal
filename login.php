@@ -13,7 +13,7 @@ $username = addslashes($username);
 $password = stripslashes($password);
 $password = addslashes($password);
 // $password = md5($password);
-$result = mysqli_query($con, "SELECT * FROM student WHERE usn = '$username' and password = '$password'") or die('Error');
+$result = mysqli_query($con, "SELECT * FROM Student WHERE usn = '$username' and password = '$password'") or die('Error');
 $count = mysqli_num_rows($result);
 // print_r(mysqli_fetch_array($result));
 

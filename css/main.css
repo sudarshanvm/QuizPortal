@@ -187,3 +187,11 @@ hr {
 	color: #fff;
 	background-color: #5cb85c;
 }
+
+.hidden{
+    display:none;
+}
+
+.unhidden{
+    display:block;
+}

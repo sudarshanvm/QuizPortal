@@ -87,15 +87,16 @@
         </div>
 
         <div class="col-md-6 box">
-        <span href="#" data-target="#login" style="color:lightyellow">Organized by Dept Of ISE, R.V. College Of Engineering, Bengaluru<br><br></span>
+        <span href="#" data-target="#login" style="color:lightyellow">Organized by Dept. Of ISE, R.V. College Of Engineering, Bengaluru<br><br></span>
         </div>
 
-        <div class="col-md-2 box">
+        <!-- <div class="col-md-2 box">
         <a href="feedback.php" style="color:lightyellow;" onmouseover="this.style('color:yellow')" target="new">Feedback</a>
-        </div>
+        </div> -->
 
         <div class="col-md-2 box">
-        <a href="about.php" s style="color:lightyellow;" onmouseover="this.style('color:yellow')" target="new">About Quizzer</a>
+<!--         <a href="about.php" s style="color:lightyellow;" onmouseover="this.style('color:yellow')" target="new">About Quiz Portal</a> -->
+        <a s style="color:lightyellow;" href="#" data-toggle="modal" data-target="#about">About Quiz Portal</a>
         </div>
 
 </div>
@@ -132,6 +133,43 @@
     </div>
   </div>
 </div>
+
+<!-- 
+for "about project" section -->
+<div class="modal fade" id="about">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+         <h3 class="modal-title"><span style="color:darkblue;font-size:12px;font-weight: bold">About The Project</span></h3>
+         <?php
+    $file = fopen("about.txt", "r");
+    while (!feof($file)) {
+    $string = fgets($file);
+    $num    = strlen($string) - 1;
+    $c      = str_split($string);
+    for ($i = 0; $i < $num; $i++) {
+        $last = $c[$i - 1];
+        if ($c[$i] == ' ' && $last == ' ') {
+            echo '&nbsp;';
+        } else {
+            echo $c[$i];
+        }
+    }
+    echo "<br />";
+}
+
+fclose($file);
+?>
+      </div>
+    </div>
+  </div>
+ </div>
+
+      
+</div>
+
+
 <!-- footer end -->
 
 
