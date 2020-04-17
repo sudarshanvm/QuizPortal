@@ -21,10 +21,17 @@
     <div class="header">
         <div class="row">
         <div class="col-lg-6">
-        <span class="logo">Quiz Portal</span></div>
-        <div class="col-md-2 col-md-offset-4">
+        <span class="logo">Quiz Portal </span></div>
+        <div class="col-md-28 col-md-offset-4">
         <!-- modalform -->
-        <a href="#" class="btn btn-primary logb pull-right"  data-toggle="modal" data-target="#myModal"> <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;<span class="title1" align:right><b> Login </b> </span></a></div>
+        <a href="#" class="btn btn-primary logb pull-right"  data-toggle="modal" data-target="#myModal"> <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;<span class="title1" align:right><b> Student Login </b> </span></a>
+
+
+        <a href="#" class="btn btn-primary logb pull-right"  data-toggle="modal" data-target="#login"> <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;<span class="title1" align:right><b> Admin/Teacher Login </b> </span></a></div>
+        
+       
+
+
         <!-- modal code -->
         <div class="modal fade" id="myModal">
         <div class="modal-dialog">
@@ -67,41 +74,40 @@
 
 <!-- mid form start -->
 
-<div class="bg1">
+<div class="panel panel-heading" style="background:#ffffff">
+      <h2 align="center"><strong>ONLINE QUIZ PORTAL</strong></h2>
 
-        
+      <div class="panel panel-body" >
+        <p><b>Team members:</b></p>
+        <table class="table table-striped" align="center">
+          <tr>
+          <th>Name</th>
+          <th>USN</th>
+          </tr>
 
-
-  </div>
+          <tr>
+            <td>UTKARSH SINGH</td><td>1RV17IS054</td>
+          </tr>
+          <tr>
+            <td>SUDARSHAN</td><td>1RV17IS049</td>
+          </tr>
+        </table>
+      </div>
+</div>
 
 <!-- mid form end -->
 
 
 <!-- footer -->
 
-
-<div class="row footer">
-
-        <div class="col-md-2 box">
-        <a href="#" data-toggle="modal" data-target="#login" style="color:lightyellow">Admin Login</a>
-        </div>
-
-        <div class="col-md-6 box">
-        <span href="#" data-target="#login" style="color:lightyellow">Organized by Dept. Of ISE, R.V. College Of Engineering, Bengaluru<br><br></span>
-        </div>
-
-        <!-- <div class="col-md-2 box">
-        <a href="feedback.php" style="color:lightyellow;" onmouseover="this.style('color:yellow')" target="new">Feedback</a>
-        </div> -->
-
-        <div class="col-md-2 box">
-<!--         <a href="about.php" s style="color:lightyellow;" onmouseover="this.style('color:yellow')" target="new">About Quiz Portal</a> -->
-        <a s style="color:lightyellow;" href="#" data-toggle="modal" data-target="#about">About Quiz Portal</a>
-        </div>
-
-</div>
+<?php 
+    include('footer.php');
+ ?>
+<!-- footer end -->
 
 
+
+<!-- admin login functionality -->
 
 <div class="modal fade" id="login">
   <div class="modal-dialog">
@@ -134,45 +140,9 @@
   </div>
 </div>
 
-<!-- 
-for "about project" section -->
-<div class="modal fade" id="about">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-         <h3 class="modal-title"><span style="color:darkblue;font-size:12px;font-weight: bold">About The Project</span></h3>
-         <?php
-    $file = fopen("about.txt", "r");
-    while (!feof($file)) {
-    $string = fgets($file);
-    $num    = strlen($string) - 1;
-    $c      = str_split($string);
-    for ($i = 0; $i < $num; $i++) {
-        $last = $c[$i - 1];
-        if ($c[$i] == ' ' && $last == ' ') {
-            echo '&nbsp;';
-        } else {
-            echo $c[$i];
-        }
-    }
-    echo "<br />";
-}
-
-fclose($file);
-?>
-      </div>
-    </div>
-  </div>
- </div>
-
-      
-</div>
-
-
-<!-- footer end -->
-
 
 </body>
 
 </html>
+
+
